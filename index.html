@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ขนมแม่เตย</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🍰 ขนมแม่เตย</h1>
+
+<div class="card">
+  <h3>พุดดิ้งไข่มุก</h3>
+  <p>25 บาท</p>
+  <button onclick="addToCart('พุดดิ้งไข่มุก', 25)">สั่งซื้อ</button>
+</div>
+
+<div class="card">
+  <h3>ไอศกรีม</h3>
+  <p>40 บาท</p>
+  <button onclick="addToCart('ไอศกรีม', 40)">สั่งซื้อ</button>
+</div>
+
+<h2>ตะกร้าสินค้า</h2>
+<ul id="cart"></ul>
+<p>รวม: <span id="total">0</span> บาท</p>
+
+<button onclick="clearCart()">เคลียร์ทั้งหมด</button>
+<button onclick="sendOrder()">สั่งซื้อจริง</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
