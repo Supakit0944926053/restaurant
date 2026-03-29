@@ -44,11 +44,18 @@ function sendOrder() {
   items.forEach(item => {
     let text = item.textContent.replace("ลบ", "").trim();
     message += "• " + text + "\n";
-});
+  });
 
   message += "------------------\n";
   message += "💰 รวม: " + total + " บาท";
 
-  const url = "https://line.me/R/msg/text/?" + encodeURIComponent(message);
-window.open(url);
+  // 🔥 ใส่ LINE ID ของคุณตรงนี้
+  let lineID = "supakit__k__"; // <-- เปลี่ยนเป็นของคุณ
+
+  let encodedMessage = encodeURIComponent(message);
+
+  // ✅ เด้งเข้าแชทคุณเลย
+  const url = `https://line.me/R/ti/p/~${lineID}?text=${encodedMessage}`;
+
+  window.open(url, "_blank");
 }
