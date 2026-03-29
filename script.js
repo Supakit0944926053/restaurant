@@ -49,13 +49,10 @@ function sendOrder() {
   message += "------------------\n";
   message += "💰 รวม: " + total + " บาท";
 
-  // 🔥 ใส่ LINE ID ของคุณตรงนี้
-  let lineID = "supakit__k__"; // <-- เปลี่ยนเป็นของคุณ
-
   let encodedMessage = encodeURIComponent(message);
 
-  // ✅ เด้งเข้าแชทคุณเลย
-  const url = `https://line.me/R/ti/p/~${lineID}?text=${encodedMessage}`;
+  // ✅ แบบถูก (ไม่ต้องใส่ LINE ID)
+  let url = "https://line.me/R/msg/text/?" + encodedMessage;
 
   window.open(url, "_blank");
 }
